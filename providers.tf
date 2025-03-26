@@ -9,15 +9,7 @@ terraform {
       source  = "hashicorp/random"
       version = ">= 3.6.3, < 4.0.0"
     }
-    cloudflare = {
-      source  = "cloudflare/cloudflare"
-      version = ">= 5.20.0, < 6.0.0"
-    }
   }
-}
-
-provider "cloudflare" {
-  api_token = var.cloudflare_api_token == "" ? "AaaA11AaaaAaaA1aa11AAa11A76aaAAa9aAAaa-a" : var.cloudflare_api_token
 }
 
 provider "aws" {
